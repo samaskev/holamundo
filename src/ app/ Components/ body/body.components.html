@@ -1,0 +1,62 @@
+<div class="row"><div class="row">
+
+    <div class="col">
+        <h1>Banda</h1>
+        <hr>
+
+        <div *ngIf="mostrar" class="card text-white bg-primary mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ frase.autor }}</h5>
+                <p class="card-text">{{ frase.mensaje }}</p>
+            </div>
+        </div>
+        <button (click)="mostrar=!mostrar" class="btn btn-outline-primary btn-block">
+            Mostrar/ocultar
+        </button><br><br><br>
+
+
+        <div *ngIf="mostrar2" class="card text-white bg-primary mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ frase2.autor2}}</h5>
+                <p class="card-text">{{ frase2.mensaje2 }}</p>
+            </div>
+        </div>
+        <button (click)="mostrar2=!mostrar2" class="btn btn-outline-primary btn-block">
+            Mostrar/ocultar
+        </button><br><br><br>
+
+        <div *ngIf="mostrar3" class="card text-white bg-primary mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ frase3.autor3}}</h5>
+                <p class="card-text">{{ frase3.mensaje3 }}</p>
+            </div>
+        </div>
+        <button (click)="mostrar3=!mostrar3" class="btn btn-outline-primary btn-block">
+            Mostrar/ocultar
+        </button>
+    </div><br><br><br>
+
+
+
+
+
+    <div class="col">
+        <h1>Temas</h1>
+        <hr>
+        <ul class="list-group">
+            <li *ngFor="let personaje of personajes;let i= index" class="list-group-item">
+                {{ i + 1}} - {{ personaje }}
+            </li><br><br><br>
+
+            <li *ngFor="let personajes2 of personajes2;let i= index" class="list-group-item">
+                {{ i + 1}} - {{ personajes2 }}
+            </li><br><br><br>
+            <li *ngFor="let personajes3 of personajes3;let i= index" class="list-group-item">
+                {{ i + 1}} - {{ personajes3 }}
+            </li>
+        </ul>
+    </div>
+</div>
